@@ -3,9 +3,8 @@
   <title>Display Animal Information </title>
 </head>
 <?php
-
 session_start();
-
+	
 // Create database connections
 $dbHost     = "sql307.epizy.com";
 $dbUsername = "epiz_30516472";
@@ -14,41 +13,33 @@ $dbName     = "epiz_30516472_animal_database";
 
 $con = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
 
-
 // Check connection
 if(!$con){
   die("Connection failed: " .mysqli_connect_error());
 }
-
 ?>
 <style>
 /* Styling the table */
-
 #tab{
-	
 	padding-left:70px;
-	
 	margin-top:0px;
 	margin-bottom: 90px;
-  margin-left: 250px;
+        margin-left: 20px;
 	border-collapse:collapse;
 	font-family:Cambria;
 	font-size: 17px;
 	
 }
 #tab th{
-padding:10px 10px 10px 10px;
-border: 2px solid black;
+	padding:10px 10px 10px 10px;
+	border: 2px solid black;
 }
 #tab td {
-padding:10px 10px 10px 10px;
-
-border: 2px solid black;
+	padding:10px 10px 10px 10px;
+	border: 2px solid black;
 }
-
-
 </style>
-
+	
 <body style="background-color:#d0e9f1;">
 <h2 style="font-family:Cambria;"><left> ANIMAL INFORMATION </left></h2>
 
@@ -58,33 +49,30 @@ border: 2px solid black;
            $_SESSION['views'] = $_SESSION['views']+1;
       else
            $_SESSION['views']=1;
-   
 ?>
 <p style="font-family:Cambria; font-size: 17px;">View Counter: <?php echo $_SESSION['views']; ?></p>
 <form action="" method = "GET">
-  <!-- Filters of Category and Life Expectency -->
-  <table style="font-family:Cambria; font-size:20px; margin-top: 20px;" >
-    <tr>                                            
-    <td>
-    <select name="a_category" style="height:30px; width:400px; font-family:Cambria;" >
-    <option>Select Category</option>
-    <option value="Herbivores">Herbivores</option>
-    <option value="Carnivores">Carnivores</option>
-    <option value="Omnivores">Omnivores</option></select>
-    </td>
-    <td>
-    <select name="a_life" style="height:30px; width:400px; font-family:Cambria;" >
-    <option>Select Life Expectancy</option>
-    <option value="0-1">0 - 1 year</option>
-    <option value="1-5">1 - 5 years</option>
-    <option value="5-10">5 - 10 years</option>
-    <option value="10+">10 + years</option></select>
-    </td>
-
-    <td> <button type="submit">Search</button> </td>
- 
-</tr>
-  </table>
+	<!-- Filters of Category and Life Expectency -->
+	<table style="font-family:Cambria; font-size:20px; margin-top: 20px;" >
+    	<tr>                                            
+    		<td>
+    		<select name="a_category" style="height:30px; width:400px; font-family:Cambria;" >
+    		<option>Select Category</option>
+    		<option value="Herbivores">Herbivores</option>
+    		<option value="Carnivores">Carnivores</option>
+    		<option value="Omnivores">Omnivores</option></select>
+    		</td>
+    		<td>
+    		<select name="a_life" style="height:30px; width:400px; font-family:Cambria;" >
+    		<option>Select Life Expectancy</option>
+    		<option value="0-1">0 - 1 year</option>
+    		<option value="1-5">1 - 5 years</option>
+    		<option value="5-10">5 - 10 years</option>
+    		<option value="10+">10 + years</option></select>
+    		</td>
+    		<td> <button type="submit">Search</button> </td>
+	</tr>
+  	</table>
 </form>
 <?php 
     
@@ -135,7 +123,6 @@ border: 2px solid black;
     
 ?>
 <tr>
-     
       <td><?php echo $row2['name']; ?></td>
       <td><?php echo $row2['category']; ?></td>
       <td><img src='<?php echo "upload/".$row2['image']; ?>'  width="230" height="200"></td>
@@ -148,15 +135,9 @@ border: 2px solid black;
     else{
       echo "No Record Found for animals";
     }
-  }
-
- 
+  } 
 ?>
-
 </table>
-
-
-
 </div>
 </body>
 </html>
