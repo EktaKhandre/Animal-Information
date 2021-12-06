@@ -16,7 +16,7 @@ include 'connection.php';
 			$description= $_POST['a_description'];
 			$life= $_POST['a_life'];
 		
-			$query="insert into animal(name,category,image,description,life,date)values('$name','$category','$image','$description','$life',CURDATE())";
+			$query="insert into animal(name,category,image,description,life,Date)values('$name','$category','$image','$description','$life',CURDATE())";
 			$res=mysqli_query($con, $query);
 			if($res)
 			{
