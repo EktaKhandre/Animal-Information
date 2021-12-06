@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Cambria', sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+
+    background-color:#fff;
+    padding: 10px;
+   
+}
+/* CSS for submission page */
+.container{
+    max-width: 700px;
+    max-height: 700px;
+    margin-left: 30%;
+    width: 100%;
+    
+    background: #93c5e5;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background:linear-gradient(135deg, #71b7e6, #9b59b6);
+} 
+.container form .ani-details{
+    justify-content: space-between;
+    
+}
+form .ani-details .inputbox{
+    margin: 20px 0 12px 0;
+    
+}
+.ani-details .inputbox .details{
+    display: block;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+.ani-details .inputbox input,select,textarea{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+form .btn-group button {
+    background-color: #4990ec; 
+    border: 1px solid 9b59b6;
+    color:black;
+    padding: 10px 24px; 
+    
+    margin-left: 22%;;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+   
+  }
+
+  /* CSS for animal.php */
+
+table{
+    border: 3px solid black;
+    border-collapse: collapse;
+    
+}
+.header_fixed{
+    margin-top: 10px;
+    margin-left:5%;
+    background-color:#fff;
+    height: 700px;
+    width: auto;
+    overflow: auto;
+    margin-top: 30px;
+}
+.header_fixed thead{
+    position: sticky;
+    top:0;
+    color: aliceblue;
+    background-color:#4990ec;
+}
+th,td{
+    border: 1px solid black;
+    padding:10px 10px 10px 10px;
+    font-size: 18px;
+}
+td img{
+      height: 90px;
+      width: 100px;
+      border-radius: 10%;
+      border: 2px solid rgb(230, 227, 221);
+  }
+
+.search .title{
+    font-size: 25px; 
+    font-weight: 900;
+    text-align:left;
+}
+.header_fixed .vc{
+    display: block;
+    font-weight: 900;
+    margin-bottom: 5px;
+    font-size: 18px;
+    text-align: right;
+}
+.search .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background:linear-gradient(135deg, #71b7e6, #9b59b6);
+} 
+.search{
+    margin-left: 10px;
+    padding-top: 10px;
+    width: 500px;
+    justify-content:left;
+    
+}
+.buttonbg{
+    background-color: #4990ec; 
+    border: 1px solid 9b59b6;
+    color:#fff;
+    padding: 10px 24px; 
+    font-family:'Cambria', sans-serif;
+    margin-left: 22%;;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;	
+}
+
+  
